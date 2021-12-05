@@ -1,0 +1,10 @@
+@media screen and (max-width:479px) {
+    /* Target portrait smartphones */
+    .title {
+        font-size: medium;
+    }
+}
+
+.flex {
+    display: flex;
+}

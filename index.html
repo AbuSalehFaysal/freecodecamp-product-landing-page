@@ -10,21 +10,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <!-- Fontawesome CDN-->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Fontawsome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="style.css">
 
     <title>FCC: Product Landing Page</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav-bar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img width="400"
                         src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
-                        alt="" class="img-fluid">
+                        alt="" class="img-fluid" id="header-img">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -34,13 +37,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item mx-5">
-                            <a class="nav-link" aria-current="page" href="#">Features</a>
+                            <a class="nav-link" aria-current="page" href="#features">Features</a>
                         </li>
                         <li class="nav-item mx-5">
-                            <a class="nav-link" href="#">How It Works</a>
+                            <a class="nav-link" href="#howItWorks">How It Works</a>
                         </li>
                         <li class="nav-item mx-5">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="#pricing">Pricing</a>
                         </li>
                     </ul>
                 </div>
@@ -51,69 +54,109 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="text-center">
-                    <h4>Handcrafted, home-made masterpieces</h4>
-                    <div class="form-group col-md-6 offset-md-3">
-                        <input class="form-control" type="text" name="" id="" placeholder="Enter your name here">
-                    </div>
-                    <button class="btn btn-warning text-uppercase fw-bold mt-2">Get started</button>
+                    <h4 class="title">Handcrafted, home-made masterpieces</h4>
+                    <form action="https://www.freecodecamp.com/email-submit" id="form" method="post">
+                        <div class="form-group col-md-4 offset-md-4">
+                            <input id="email" type="email" class="form-control" placeholder="Enter your email address">
+                        </div>
+                        <input id="submit" type="submit" class="btn btn-warning text-uppercase mt-2 fw-bolder">get started</input>
+                    </form>
                 </div>
             </div>
-            <div class="row mt-5">
-                <div class="col-md-8 offset-md-2">
-                    <div class="row">
-                        <div class="col-md-2 d-none d-sm-block">
-                            <div class="text-warning">
-                                <h1 class="display-1"><i class="fas fa-fire"></i></h1>
+            <div class="container" id="features">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="row mt-5">
+                            <div class="col-md-2">
+                                <h1 class="display-1 text-warning"><i class="fas fa-fire"></i></h1>
+                            </div>
+                            <div class="col-md-10">
+                                <h1 class="fw-bolder">Premium Materials</h1>
+                                <p>Our trombones use the shiniest brass which is sourced locally. This will increase the
+                                    longevity of your purchase.</p>
                             </div>
                         </div>
-                        <div class="col-md-10">
-                            <span class="fw-bold fs-3">Premium Materials</span> <br>
-                            Our trombones use the shiniest brass which is sourced locally. This will increase the
-                            longevity of your purchase.
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 d-none d-sm-block">
-                            <div class="text-warning">
-                                <h1 class="display-1"><i class="fas fa-truck"></i></h1>
+                        <div class="row mt-5">
+                            <div class="col-md-2">
+                                <h1 class="display-1 text-warning"><i class="fas fa-truck"></i></i></h1>
+                            </div>
+                            <div class="col-md-10">
+                                <h1 class="fw-bolder">Fast Shipping</h1>
+                                <p>We make sure you recieve your trombone as soon as we have finished making it. We also
+                                    provide free returns if you are not satisfied.</p>
                             </div>
                         </div>
-                        <div class="col-md-10">
-                            <span class="fw-bold fs-3">Fast Shipping</span> <br>
-                            We make sure you recieve your trombone as soon as we have finished making it. We also
-                            provide free returns if you are not satisfied.
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 d-none d-sm-block">
-                            <div class="text-warning">
-                                <h1 class="display-1"><i class="fas fa-battery-full"></i></h1>
+                        <div class="row mt-5">
+                            <div class="col-md-2">
+                                <h1 class="display-1 text-warning"><i class="fas fa-battery-full"></i></h1>
                             </div>
-                        </div>
-                        <div class="col-md-10">
-                            <span class="fw-bold fs-3">Quality Assurance</span> <br>
-                            For every purchase you make, we will ensure there are no damages or faults and we will check
-                            and test the pitch of your instrument.
+                            <div class="col-md-10">
+                                <h1 class="fw-bolder">Quality Assurance</h1>
+                                <p>For every purchase you make, we will ensure there are no damages or faults and we
+                                    will check and test the pitch of your instrument.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5 text-center">
-                <div class="col-md-6 offset-md-3">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/y8Yv4pnO7qc"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+            <div class="container mt-5" id="howItWorks">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/y8Yv4pnO7qc"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
-            <div class="row mt-5">
-                <div class="col-md-12 text-center">
-                    <div class="row text-center">
-                        <div class="col-md-3">
-                            <h5 class="bg-secondary">TENOR TROMBONE</h5>
+            <div class="container mt-5" id="pricing">
+                <div class="row flex justify-content-center">
+                    <div class="col-md-3 mx-1 border border-dark border-2 p-0">
+                        <h1 class="m-0 fw-normal fs-5 text-uppercase bg-secondary text-center">TENOR TROMBONE</h1>
+                        <div class="p-2 text-center">
+                            <h1 class="fs-4">$600</h1>
+                            <p>Lorem ipsum.</p>
+                            <p>Lorem ipsum.</p>
+                            <p>Lorem ipsum dolor.</p>
+                            <p>Lorem ipsum.</p>
+                            <button class="btn btn-warning text-uppercase">select</button>
                         </div>
-                        <div class="col-md-3">BBBBBBBBBBBBBBBBBBBB</div>
-                        <div class="col-md-3">CCCCCCCCCCCCCCCCCCCC</div>
+                    </div>
+                    <div class="col-md-3 mx-1 border border-dark border-2 p-0">
+                        <h1 class="m-0 fw-normal fs-5 text-uppercase bg-secondary text-center">BASS TROMBONE</h1>
+                        <div class="p-2 text-center">
+                            <h1 class="fs-4">$900</h1>
+                            <p>Lorem ipsum.</p>
+                            <p>Lorem ipsum.</p>
+                            <p>Lorem ipsum dolor.</p>
+                            <p>Lorem ipsum.</p>
+                            <button class="btn btn-warning text-uppercase">select</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mx-1 border border-dark border-2 p-0">
+                        <h1 class="m-0 fw-normal fs-5 text-uppercase bg-secondary text-center">VALVE TROMBONE</h1>
+                        <div class="p-2 text-center">
+                            <h1 class="fs-4">$1200</h1>
+                            <p>Plays similar to a Trumpet</p>
+                            <p>Great for Jazz Bands</p>
+                            <p>Lorem ipsum dolor.</p>
+                            <p>Lorem ipsum.</p>
+                            <button class="btn btn-warning text-uppercase">select</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container bg-secondary mt-5 py-2">
+                <div class="row">
+                    <div class="d-flex justify-content-end">
+                        <a class="mx-1 text-dark text-decoration-none" href="#">Privacy</a>
+                        <a class="mx-1 text-dark text-decoration-none" href="#">Terms</a>
+                        <a class="mx-1 text-dark text-decoration-none" href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="flex justify-content-end">
+                        <p>Copyright 2016, Original Trombones</p>
                     </div>
                 </div>
             </div>
